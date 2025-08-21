@@ -1,7 +1,7 @@
 from Bio import SeqIO
 import matplotlib.pyplot as plt
 
-fasta_file = "/content/Ecoli.fna"      # E. coli genome file
+fasta_file = "Ecoli.fna"      # E. coli genome file
 window_size = 1000              # Sliding window of 1000 bp
 output_csv = "gc_content.csv"
 
@@ -45,4 +45,3 @@ for record in SeqIO.parse(fasta_file, "fasta"):
     plt.grid(True)
     plt.tight_layout()
     plt.show()
-
