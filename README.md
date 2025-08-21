@@ -32,8 +32,8 @@ By analyzing a genomic FASTA file (e.g., from *Escherichia coli*), the script co
 ### 🔁 Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/jahnavigbedre/GC_content.git
-cd GC_content
+git clone https://github.com/jahnavigbedre/gc_content.git
+cd gc_content
 ```
 
 ### 💾 Step 2: Install Required Packages
@@ -113,7 +113,7 @@ for record in SeqIO.parse(fasta_file, "fasta"):
     # Save to CSV
     with open(output_csv, "w") as out:
         out.write(f"# Genome: {record.id}, Window Size: {window_size} bp\n")
-        out.write("Start_Position,GC_Content\n")
+        out.write("Start_Position,gc_content\n")
         for pos, gc in zip(positions, gc_values):
             out.write(f"{pos},{gc:.2f}\n")
 
@@ -145,7 +145,7 @@ Window Size: 1000 bp
 ### 📁 CSV Output (`gc_content.csv`):
 
 ```
-Start_Position,GC_Content
+Start_Position,gc_content
 0,51.60
 1000,52.40
 2000,48.70
@@ -153,7 +153,7 @@ Start_Position,GC_Content
 ```
 
 - `Start_Position`: The starting base pair of each 1000 bp window  
-- `GC_Content`: The GC percentage in that window  
+- `gc_content`: The GC percentage in that window  
 
 ### 📈 Output Plot:
 
@@ -172,7 +172,7 @@ Start_Position,GC_Content
 ## 📂 Project Structure
 
 ```
-GC_content/
+gc_content/
 ├── Ecoli.fna                # Input FASTA genome file
 ├── gc_content.py            # Main Python script
 ├── gc_content.csv           # Output GC% per 1000 bp window
@@ -201,7 +201,7 @@ M.Sc. Bioinformatics – Personal Genomics Project
 
 ## 🔗 GitHub Repository
 
-👉 [https://github.com/jahnavigbedre/GC_content](https://github.com/jahnavigbedre/GC_content)  
+👉 [https://github.com/jahnavigbedre/gc_content](https://github.com/jahnavigbedre/gc_content)  
 
 
 
